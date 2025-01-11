@@ -85,9 +85,11 @@ const expense = (textInput, amountInput) => {
 };
 
 const addTransition=()=>{
+    if([option.value,amountInput.value].some(item=>item=="")){return}
+
+
     if(option.value==="income"){
         const listItem=historyContainer.querySelectorAll("li");
-
         if(listItem.length>1){
             historyContainer.classList.add("history"); 
         }
